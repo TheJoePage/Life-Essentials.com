@@ -32,7 +32,26 @@ const buildPostCache = async()=>{
         for (const f of ls){
             try{
                 posts.push(await readPost(f.slice(0,-3),true));
+            }catch(e){
+                console.error("Failed to read a post: ",e);
             }
         }
+
+        posts = posts.filter(p=>p.timestamp&&p.timestamp<new Date());
+        posts.sort((l,r)=>r.timestamp-l.timestamp);
+
+        for(const p of posts){
+            postsAlt.push({
+                title:p.title,
+                author:p.author,
+                text:p.fullText,
+                url:p.url
+            });
+        }
+        previewCache=posts;
+        previewCacheAlt=postsAlt;
+    }catch(e){
+        console.error("Failed to build the post cache: ",e);
     }
-}
+};
+

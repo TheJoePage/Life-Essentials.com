@@ -1,0 +1,32 @@
+{
+  "name": "bad-words",
+  "version": "3.0.4",
+  "description": "A javascript filter for bad words, heavily based on bad-words by webmech, changed for Life-Essentials.com",
+  "main": "./lib/badwords",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha -R spec",
+    "docs": "./node_modules/.bin/documentation readme --section API ./lib/index.js"
+  },
+  "keywords": [
+    "curse",
+    "words",
+    "profanity",
+    "filter"
+  ],
+  "dependencies": {
+    "badwords-list": "^1.0.0"
+  },
+  "devDependencies": {
+    "better-assert": "1.0.0",
+    "documentation": "^5.3.3",
+    "mocha": "^5.2.0"
+  },
+  "author": "Mike P.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}

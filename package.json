@@ -1,0 +1,26 @@
+{
+  "name": "life-essentials.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bad-words": "^3.0.4",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-prometheus-middleware": "^1.2.0",
+    "fs": "^0.0.1-security",
+    "gray-matter": "^4.0.3",
+    "highlight.js": "^11.8.0",
+    "html-to-text": "^9.0.5",
+    "marked": "^5.1.1",
+    "moment": "^2.29.4",
+    "path": "^0.12.7",
+    "striptags": "^3.2.0"
+  }
+}
